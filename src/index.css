@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.content {
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  min-width: 320px;
+  max-width: 640px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: #0f172a;
+  margin: 0;
+  font-size: 1.5rem;
+  padding: 0 0 8px 0;
+  border-bottom: 1px solid #bbb;
+}
+
+.sections {
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section .header {
+  font-size: 0.625rem;
+  color: #0f172a;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.section .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.section .row div:first-child {
+  color: #334155;
+}
+
+.section .row div:last-child {
+  color: #0f172a;
+  font-weight: 400;
+}
+
+.network-controls {
+  display: flex;
+  gap: 2;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 8px;
+
+  border: 1px solid #ddd;
+  color: white;
+  padding: 8px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.error-message {
+  color: darkred;
+  font-weight: bold;
+  text-align: center;
+  margin: 24px;
+}
+
+.network-controls {
+  background-color: #282c34;
+}
+.network-controls .control {
+  display: flex;
+  flex-direction: column;
+}
+
+.network-controls .control label {
+  font-size: 0.875rem;
+}
+
+.network-controls .control label span {
+  float: right;
+}
