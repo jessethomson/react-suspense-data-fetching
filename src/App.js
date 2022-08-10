@@ -1,7 +1,7 @@
 import { Suspense } from "react";
-import { fetch } from "react-fetch";
 import { ErrorBoundary } from "react-error-boundary";
 import { ErrorMessage, Spinner } from "components";
+import { fetch } from "react-fetch";
 
 function App() {
   return (
@@ -9,12 +9,14 @@ function App() {
       <div className="content">
         <h1 className="title">Account Info</h1>
         <div className="sections">
-          <ErrorBoundary FallbackComponent={ErrorMessage}>
-            <Suspense fallback={<Spinner />}>
+          <Suspense fallback={<Spinner />}>
+            <ErrorBoundary FallbackComponent={ErrorMessage}>
               <UserSection />
+            </ErrorBoundary>
+            <ErrorBoundary FallbackComponent={ErrorMessage}>
               <ProfileSection />
-            </Suspense>
-          </ErrorBoundary>
+            </ErrorBoundary>
+          </Suspense>
         </div>
       </div>
     </div>
